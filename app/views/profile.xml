@@ -1,0 +1,85 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+  <GridLayout rows="auto, auto, *">
+    <GridLayout cssClass="action-bar" columns="auto, *">
+      <Image stretch="none" cssClass="icon-menu" tap="back" src="res://ic_arrow_back"/>
+      <Label text="Profile" cssClass="action-bar-title" colSpan="3"/>
+    </GridLayout>
+
+    <ActivityIndicator busy="{{ isBusy }}" row="2"/>
+
+    <GridLayout row="1">
+      <SegmentedBar selectedBackgroundColor="#fac950" selectedIndex="{{ selectedTab }}">
+        <SegmentedBar.items>
+          <SegmentedBarItem title="Profile" />
+          <SegmentedBarItem title="Pets" />
+          <SegmentedBarItem title="Roofs" />
+        </SegmentedBar.items>
+      </SegmentedBar>
+    </GridLayout>
+
+    <GridLayout row="2">
+      <GridLayout cssClass="user" style="{{ (selectedTab === 0) ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Image src="~/res/bkg-smalldef.jpg" stretch="aspectFill"/>
+
+        <StackLayout bindingContext="{{ user }}" >
+          <Image cssClass="user-picture" src="{{ PictureUrl }}" stretch="aspectFill" />
+          <Label text="{{ DisplayName }}" cssClass="user-title" />
+        </StackLayout>
+
+        <Button text="Edit" tap="{{ editUser }}" cssClass="edit-btn"/>
+      </GridLayout>
+
+      <ListView items="{{ pets }}" itemTap="{{ showPet }}" style="{{ (selectedTab === 1) ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <ListView.itemTemplate>
+          <StackLayout>
+            <GridLayout cssClass="pet">
+              <Image src="{{ Picture }}" stretch="aspectFill"/>
+
+              <AbsoluteLayout>
+                <Image src="~/res/arrow-down.png" left="30" top="0" width="20" />
+                <Image src="{{ Type == 0 ? '~/res/pets.png' : ( Type == 1 ? '~/res/cat.png' : '~/res/dog.png') }}" left="25" top="20" width="30" />
+                <StackLayout left="60" top="20">
+                  <Label cssClass="pet-title" text="{{ Name || 'Downloading...' }}"/>
+                </StackLayout>
+              </AbsoluteLayout>
+            </GridLayout>
+
+            <GridLayout cssClass="pet-info-section" columns="*, 10, *, 10, *">
+              <Label cssClass="pet-info" text="{{ Breed }}" col="0"/>
+              <Label cssClass="pet-info" text="-" col="1"/>
+              <Label cssClass="pet-info" text="{{ Gender == 0 ? 'n/a' : ( Gender == 1 ? 'male' : 'female') }}" col="2"/>
+              <Label cssClass="pet-info" text="-" col="3"/>
+              <Label cssClass="pet-info" text="{{ Age }}" col="4"/>
+            </GridLayout>
+          </StackLayout>
+        </ListView.itemTemplate>
+      </ListView>
+
+      <ListView items="{{ roofs }}" itemTap="{{ showRoof }}"  style="{{ (selectedTab === 2) ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <ListView.itemTemplate>
+          <StackLayout>
+            <GridLayout cssClass="roof">
+              <Image src="{{ Picture }}" stretch="aspectFill"/>
+
+              <AbsoluteLayout>
+                <Image src="~/res/arrow-down.png" left="30" top="0" width="20" />
+                <Image src="{{ Type == 0 ? '~/res/roofs.png' : ( Type == 1 ? '~/res/cat.png' : '~/res/dog.png') }}" left="25" top="20" width="30" />
+                <StackLayout left="60" top="20">
+                  <Label cssClass="roof-title" text="{{ Title || 'Downloading...' }}"/>
+                </StackLayout>
+              </AbsoluteLayout>
+            </GridLayout>
+
+            <GridLayout cssClass="roof-info-section" columns="*, 10, *, 10, *">
+              <Label cssClass="roof-info" text="{{ Type == 1 ? 'House' : ( Type == 2 ? 'Apartment' : 'Hotel') }}" col="0"/>
+              <Label cssClass="roof-info" text="-" col="1"/>
+              <Label cssClass="roof-info" text="{{ PetType == 1 ? 'All' : ( PetType == 2 ? 'Dogs only' : 'Cats only') }}" col="2"/>
+              <Label cssClass="roof-info" text="-" col="3"/>
+              <Label cssClass="roof-info" text="{{ Price + '$/day' || '' }}" col="4"/>
+            </GridLayout>
+          </StackLayout>
+        </ListView.itemTemplate>
+      </ListView>
+    </GridLayout>
+  </GridLayout>
+</Page>

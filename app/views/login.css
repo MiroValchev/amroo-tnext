@@ -1,0 +1,17 @@
+﻿.page {
+    /*background-image: url('~/res/bkg-smalldef.jpg');*/
+    text-align: center;
+}
+
+button {
+    width: 200;
+    margin: 10;
+}
+
+.label {
+    color: #ffffff;
+}
+
+.login-btn {
+    background-color: #259B24;
+}

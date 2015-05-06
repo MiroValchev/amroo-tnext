@@ -1,0 +1,3 @@
+<StackLayout xmlns:customControls="xml-declaration/dot">
+  <Image src="~/res/dot.png"/>  
+</StackLayout>

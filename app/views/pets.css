@@ -1,0 +1,28 @@
+.pet-title {
+    width: 100%;
+    height: 30%;
+    background-color: #F5F6F5;
+    font-size: 20;
+    margin-top: 0;
+    vertical-align: center;
+    horizontal-align: center;
+}
+
+.pet-info {
+    width: 100%;
+    height: 30%;
+    font-size: 16;
+}
+
+.pet-label {
+    color: #929292;
+}
+
+.pet-price {
+    padding-left: 20;
+    padding-right: 20;
+    background-color: #FD5858;
+    font-size: 18;
+    color: white;
+    horizontal-align: right;
+}

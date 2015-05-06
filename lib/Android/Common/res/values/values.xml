@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_Release/workspace/Common/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_Release/workspace/Common/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="trial_message">To get access to the latest updates across Android suite and Telerik\'s dedicated support please purchase a commercial license now.</string>
+    <string name="trial_message_caption">Telerik UI for Android Trial</string>
+</resources>

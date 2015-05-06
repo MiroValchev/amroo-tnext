@@ -1,0 +1,37 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+  <GridLayout rows="auto, *">    
+    <GridLayout cssClass="action-bar" columns="auto, *">
+      <Image stretch="none" cssClass="icon-menu" tap="back" src="res://ic_arrow_back"/>
+      <Label text="Profile" cssClass="action-bar-title" colSpan="3"/>      
+    </GridLayout>
+
+    <ScrollView row="1">
+      <GridLayout rows="auto, auto, *, auto">
+        <Image src="~/res/bkg-smalldef.jpg" stretch="aspectFill" rowSpan="4"/>
+
+        <StackLayout row="0" bindingContext="{{ user }}">
+          <Image src="{{ PictureUrl }}" cssClass="user-picture" stretch="aspectFill"/>
+        </StackLayout>
+        <StackLayout row="1" bindingContext="{{ user }}">
+          <TextField hint="Name" text="{{ DisplayName }}"/>
+          <TextField hint="Username" text="{{ Username }}"/>
+          <TextField keyboardTypeProperty="email" hint="Email" text="{{ Email }}"/>
+          <TextField keyboardTypeProperty="phone" hint="Phone number" text="{{ PhoneNumber }}"/>
+          <TextView hint="Tell a bit about yourself" text="{{ Description }}"/>
+        </StackLayout>
+        <StackLayout row="2">
+          <TextField secure="true" hint="Your current password" text="{{ password }}"/>
+          <TextField secure="true" hint="New password" text="{{ newPassword }}"/>
+          <TextField secure="true" hint="Cofirm new password" text="{{ confirmPassword }}"/>
+        </StackLayout>
+        <StackLayout row="3">
+          <Button text="Save"  tap="{{ save }}"/>
+          <Button text="Cancel" tap="{{ cancel }}"/>
+          <Button text="Take a picture" tap="{{ takePicture }}"/>
+          <Button text="Choose from album" tap="{{ openAlbums }}"/>
+        </StackLayout>
+        <ActivityIndicator busy="{{ isBusy }}"/>
+      </GridLayout>
+    </ScrollView>
+  </GridLayout>
+</Page>

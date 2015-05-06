@@ -1,0 +1,27 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+  <GridLayout rows="auto, *">    
+    <GridLayout cssClass="action-bar" columns="auto, *">
+      <Image stretch="none" cssClass="icon-menu" src="res://icon"/>
+      <Label text="Welcome" cssClass="action-bar-title" colSpan="3"/>      
+    </GridLayout>
+
+    <ScrollView row="1">
+      <GridLayout>
+        <Image src="~/res/bkg-smalldef.jpg" stretch="aspectFill"/>
+        <StackLayout>
+          <Image cssClass="logoImage" src="~/res/logo.png"/>
+
+          <TextField id="name" hint="name" text="{{ name }}"/>
+          <TextField id="email" keyboardType="email" hint="e-mail" text="{{ email }}"/>
+          <TextField id="username" hint="username" text="{{ username }}"/>
+          <TextField id="password" hint="password" secure="true" text="{{ password }}"/>
+          <TextField id="passwordRepeat" hint="repeat password" secure="true" text="{{ passwordRepeat }}"/>
+
+          <Button text="Lets go" tap="{{ save }}"/>
+          <Button text="Cancel" tap="{{ cancel }}"/>
+        </StackLayout>
+        <ActivityIndicator busy="{{ isBusy }}"/>
+      </GridLayout>
+    </ScrollView>
+  </GridLayout>
+</Page>

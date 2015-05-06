@@ -1,0 +1,52 @@
+.filters {
+    margin: 0 15 15 15;
+}
+
+.filter {
+    margin: 8 0;    
+}
+
+.filter-title {
+    font-size: 18;
+    horizontal-align: center;
+    margin: 10;
+}
+
+.filter-label {
+    font-size: 18;
+    vertical-align: center;
+}
+
+.roof {
+    background-color: #ffffff;
+    height: 300;
+}
+
+.roof-header {
+    background-color: #F5F6F5;
+    padding: 15 20;
+    font-size: 20;
+}
+
+.roof-header-title {
+    /*color: #929292;*/
+}
+
+.roof-price {
+    background-color: #FD5858;
+    font-size: 18;
+    color: white;
+    vertical-align: bottom;
+    margin-bottom: 20;
+    padding: 16 20 6 20;
+    /*height:40;*/
+}
+
+.roof-info {
+    padding: 15 15;
+    font-size: 16;
+}
+
+.roof-info-item {
+    horizontal-align: center;
+}

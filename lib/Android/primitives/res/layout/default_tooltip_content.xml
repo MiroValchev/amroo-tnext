@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tooltip_content_container"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView android:id="@+id/chart_tooltip_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/chart_tooltip_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</LinearLayout><!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_Release/workspace/Primitives/src/main/res/layout/default_tooltip_content.xml -->

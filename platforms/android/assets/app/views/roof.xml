@@ -1,0 +1,66 @@
+<Page navigatedTo="pageNavigatedTo">
+  <GridLayout rows="auto, *">    
+    <GridLayout cssClass="action-bar" columns="auto, *">
+      <Image stretch="none" cssClass="icon-menu" tap="back" src="res://ic_arrow_back"/>
+      <Label text="Roof" cssClass="action-bar-title" colSpan="3"/>      
+    </GridLayout>
+
+    <ScrollView row="1">
+      <StackLayout>
+        <StackLayout cssClass="roof-header">
+          <Label cssClass="roof-header-title" text="{{ Title }}" textWrap="true"/>
+        </StackLayout>
+
+        <GridLayout cssClass="roof">
+          <Image src="{{ Picture }}" stretch="aspectFill"/>
+
+          <AbsoluteLayout>
+            <Image src="~/res/arrow-down.png" left="30" top="0" width="20" />
+            <Image src="{{ Type == 1 ? '~/res/house.png' : ( Type == 2 ? '~/res/apartment.png' : '~/res/hotel.png') }}" left="25" top="20" width="30" />
+          </AbsoluteLayout>
+        </GridLayout>
+
+        <StackLayout cssClass="roof-info">
+          <StackLayout orientation="horizontal">
+            <Label text="Type of roof" cssClass="roof-info-label"/>
+            <GridLayout>
+              <Label cssClass="roof-info-value" text="{{ Type == 1 ? 'House' : ( Type == 2 ? 'Apartment' : 'Hotel') }}"/>
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <StackLayout orientation="horizontal">
+            <Label text="Animal allowed" cssClass="roof-info-label" />
+            <GridLayout>
+              <Label cssClass="roof-info-value" text="{{ PetType == 1 ? 'All' : ( PetType == 2 ? 'Dogs only' : 'Cats only') }}"/>
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <StackLayout orientation="horizontal">
+            <Label text="Location" cssClass="roof-info-label"/>
+            <GridLayout>
+              <Label cssClass="roof-info-value" text="{{ Address }}" />
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <StackLayout orientation="horizontal">
+            <Label text="Price" cssClass="roof-info-label"/>
+            <GridLayout>
+              <Label cssClass="roof-info-value mod-price" text="{{ Price  + '$/day' || 'n/a' }}"/>
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="description">
+            <StackLayout cssClass="horizontal-line"/>
+            <Label text="Little more about the roof" cssClass="description-label"/>
+
+            <StackLayout cssClass="horizontal-line" style="margin: 10 50"/>
+            <Label text="{{ Description }}" textWrap="true"/>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+</Page>

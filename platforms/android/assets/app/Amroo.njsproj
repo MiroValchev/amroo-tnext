@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Amroo</Name>
+    <RootNamespace>Amroo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e6277eb3-03b0-422b-86ee-5c1f8b4e519e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="App_Resources\Android\drawable-hdpi\facebook.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\google.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_add_to_fav.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_add_to_fav_1.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_map.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_search.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_share.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\linkedin.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\twitter.png" />
+    <Content Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\facebook.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\google.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_add_to_fav.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_add_to_fav_1.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_map.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_search.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_share.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\linkedin.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\twitter.png" />
+    <Content Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\facebook.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\google.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_add_to_fav.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_add_to_fav_1.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_map.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_search.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_share.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\linkedin.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\twitter.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\facebook.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\google.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_add_to_fav.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_add_to_fav_1.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_map.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_search.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_share.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\linkedin.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\twitter.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\facebook.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\google.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_add_to_fav.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_add_to_fav_1.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_map.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_search.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_share.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\linkedin.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\twitter.png" />
+    <Content Include="App_Resources\Android\values-v21\styles.xml" />
+    <Content Include="App_Resources\Android\values\styles.xml" />
+    <Content Include="CodingConvention.md" />
+    <Content Include="CONTRIBUTING.md" />
+    <Content Include="controls\dot\Dot.xml" />
+    <Content Include="controls\dot\package.json" />
+    <Content Include="controls\mymodulewithxml\MyControl.xml" />
+    <Content Include="controls\mymodulewithxml\package.json" />
+    <Content Include="controls\mymodule\package.json" />
+    <Content Include="CreateNewModule.md" />
+    <Content Include="DebugV8Heap.md" />
+    <Content Include="LICENSE" />
+    <Content Include="res\apartment.png" />
+    <Content Include="res\arrow-down.png" />
+    <Content Include="res\arrow-forward.png" />
+    <Content Include="res\arrow.png" />
+    <Content Include="res\avatar.png" />
+    <Content Include="res\back.png" />
+    <Content Include="res\bkg-fullhd.png" />
+    <Content Include="res\call.png" />
+    <Content Include="res\cat.png" />
+    <Content Include="res\dog.png" />
+    <Content Include="res\dot.png" />
+    <Content Include="res\drawer.png" />
+    <Content Include="res\edit.png" />
+    <Content Include="res\gallery.png" />
+    <Content Include="res\hotel.png" />
+    <Content Include="res\house.png" />
+    <Content Include="res\icon-add%402x.png" />
+    <Content Include="res\icon-add.png" />
+    <Content Include="res\icon-arrow_left%402x.png" />
+    <Content Include="res\icon-arrow_left.png" />
+    <Content Include="res\icon-facebook%402x.png" />
+    <Content Include="res\icon-facebook.png" />
+    <Content Include="res\icon-google%402x.png" />
+    <Content Include="res\icon-google.png" />
+    <Content Include="res\icon-liveid%402x.png" />
+    <Content Include="res\icon-liveid.png" />
+    <Content Include="res\location.png" />
+    <Content Include="res\logo.png" />
+    <Content Include="res\bkg-smalldef.jpg" />
+    <Content Include="res\mail.png" />
+    <Content Include="res\pets.png" />
+    <Content Include="res\photo.png" />
+    <Content Include="res\pin.png" />
+    <Content Include="res\room.png" />
+    <Content Include="res\settings.png" />
+    <Content Include="res\sprite-icons.png" />
+    <Content Include="res\star-empty.png" />
+    <Content Include="res\star.png" />
+    <Content Include="source-control.md" />
+    <Content Include="TelerikUI\side-bar\package.json" />
+    <Content Include="tns_modules\application\package.json" />
+    <Content Include="tns_modules\camera\package.json" />
+    <Content Include="tns_modules\color\package.json" />
+    <Content Include="tns_modules\console\package.json" />
+    <Content Include="tns_modules\data\observable-array\package.json" />
+    <Content Include="tns_modules\data\observable\package.json" />
+    <Content Include="tns_modules\data\virtual-array\package.json" />
+    <Content Include="tns_modules\file-system\package.json" />
+    <Content Include="tns_modules\fps-meter\package.json" />
+    <Content Include="tns_modules\globals\package.json" />
+    <Content Include="tns_modules\http\package.json" />
+    <Content Include="tns_modules\image-source\package.json" />
+    <Content Include="tns_modules\js-libs\easysax\package.json" />
+    <Content Include="tns_modules\js-libs\esprima\package.json" />
+    <Content Include="tns_modules\js-libs\polymer-expressions\package.json" />
+    <Content Include="tns_modules\js-libs\reworkcss\package.json" />
+    <Content Include="tns_modules\LICENSE" />
+    <Content Include="tns_modules\local-settings\package.json" />
+    <Content Include="tns_modules\location\package.json" />
+    <Content Include="tns_modules\package.json" />
+    <Content Include="tns_modules\platform\package.json" />
+    <Content Include="tns_modules\text\package.json" />
+    <Content Include="tns_modules\timer\package.json" />
+    <Content Include="tns_modules\trace\package.json" />
+    <Content Include="tns_modules\ui\activity-indicator\package.json" />
+    <Content Include="tns_modules\ui\border\package.json" />
+    <Content Include="tns_modules\ui\builder\package.json" />
+    <Content Include="tns_modules\ui\button\package.json" />
+    <Content Include="tns_modules\ui\content-view\package.json" />
+    <Content Include="tns_modules\ui\date-picker\package.json" />
+    <Content Include="tns_modules\ui\dialogs\package.json" />
+    <Content Include="tns_modules\ui\editable-text-base\package.json" />
+    <Content Include="tns_modules\ui\enums\package.json" />
+    <Content Include="tns_modules\ui\frame\package.json" />
+    <Content Include="tns_modules\ui\gestures\package.json" />
+    <Content Include="tns_modules\ui\image-cache\package.json" />
+    <Content Include="tns_modules\ui\image\package.json" />
+    <Content Include="tns_modules\ui\label\package.json" />
+    <Content Include="tns_modules\ui\layouts\absolute-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\dock-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\grid-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\stack-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\wrap-layout\package.json" />
+    <Content Include="tns_modules\ui\list-picker\package.json" />
+    <Content Include="tns_modules\ui\list-view\package.json" />
+    <Content Include="tns_modules\ui\page\package.json" />
+    <Content Include="tns_modules\ui\placeholder\package.json" />
+    <Content Include="tns_modules\ui\progress\package.json" />
+    <Content Include="tns_modules\ui\scroll-view\package.json" />
+    <Content Include="tns_modules\ui\search-bar\package.json" />
+    <Content Include="tns_modules\ui\segmented-bar\package.json" />
+    <Content Include="tns_modules\ui\slider\package.json" />
+    <Content Include="tns_modules\ui\styling\package.json" />
+    <Content Include="tns_modules\ui\switch\package.json" />
+    <Content Include="tns_modules\ui\tab-view\package.json" />
+    <Content Include="tns_modules\ui\text-base\package.json" />
+    <Content Include="tns_modules\ui\text-field\package.json" />
+    <Content Include="tns_modules\ui\text-view\package.json" />
+    <Content Include="tns_modules\ui\time-picker\package.json" />
+    <Content Include="tns_modules\ui\web-view\package.json" />
+    <Content Include="tns_modules\xml\package.json" />
+    <Content Include="views\activities.xml" />
+    <Content Include="views\activity.xml" />
+    <Content Include="views\add-activity.xml" />
+    <Content Include="views\add-comment.xml" />
+    <Content Include="views\add-pet.xml" />
+    <Content Include="views\add-pet.css" />
+    <Content Include="views\add-roof.xml" />
+    <Content Include="views\edit-profile.xml" />
+    <Content Include="views\add-roof.css" />
+    <Content Include="views\login.css" />
+    <Content Include="views\login.xml" />
+    <Content Include="views\demo.xml" />
+    <Content Include="views\register.css" />
+    <Content Include="views\profile.css" />
+    <Content Include="views\pets.css" />
+    <Content Include="views\main.css" />
+    <Content Include="views\main.xml" />
+    <Content Include="views\profile.xml" />
+    <Content Include="views\register.xml" />
+    <Content Include="views\pet.css" />
+    <Content Include="views\pet.xml" />
+    <Content Include="views\search.css" />
+    <Content Include="views\roof.css" />
+    <Content Include="views\roof.xml" />
+    <Content Include="views\search.xml" />
+    <TypeScriptCompile Include="app.ts" />
+    <Content Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
+    <Content Include="App_Resources\iOS\Default%402x.png" />
+    <Content Include="App_Resources\iOS\Default%402x.png" />
+    <Content Include="App_Resources\iOS\Default-568h%402x.png" />
+    <Content Include="App_Resources\iOS\Default-568h%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Landscape%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Landscape%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Landscape.png" />
+    <Content Include="App_Resources\iOS\Default-Landscape.png" />
+    <Content Include="App_Resources\iOS\Default-Portrait%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Portrait%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Portrait.png" />
+    <Content Include="App_Resources\iOS\Default-Portrait.png" />
+    <Content Include="App_Resources\iOS\Default.png" />
+    <Content Include="App_Resources\iOS\Default.png" />
+    <Content Include="App_Resources\iOS\icon%402x.png" />
+    <Content Include="App_Resources\iOS\icon%402x.png" />
+    <Content Include="App_Resources\iOS\icon-40%402x.png" />
+    <Content Include="App_Resources\iOS\icon-40%402x.png" />
+    <Content Include="App_Resources\iOS\icon-40.png" />
+    <Content Include="App_Resources\iOS\icon-40.png" />
+    <Content Include="App_Resources\iOS\icon-60%402x.png" />
+    <Content Include="App_Resources\iOS\icon-60%402x.png" />
+    <Content Include="App_Resources\iOS\icon-60%403x.png" />
+    <Content Include="App_Resources\iOS\icon-60%403x.png" />
+    <Content Include="App_Resources\iOS\icon-60.png" />
+    <Content Include="App_Resources\iOS\icon-60.png" />
+    <Content Include="App_Resources\iOS\icon-72%402x.png" />
+    <Content Include="App_Resources\iOS\icon-72%402x.png" />
+    <Content Include="App_Resources\iOS\icon-72.png" />
+    <Content Include="App_Resources\iOS\icon-72.png" />
+    <Content Include="App_Resources\iOS\icon-76%402x.png" />
+    <Content Include="App_Resources\iOS\icon-76%402x.png" />
+    <Content Include="App_Resources\iOS\icon-76.png" />
+    <Content Include="App_Resources\iOS\icon-76.png" />
+    <Content Include="App_Resources\iOS\Icon-Small%402x.png" />
+    <Content Include="App_Resources\iOS\Icon-Small%402x.png" />
+    <Content Include="App_Resources\iOS\Icon-Small-50%402x.png" />
+    <Content Include="App_Resources\iOS\Icon-Small-50%402x.png" />
+    <Content Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Content Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Content Include="App_Resources\iOS\Icon-Small.png" />
+    <Content Include="App_Resources\iOS\Icon-Small.png" />
+    <Content Include="App_Resources\iOS\icon.png" />
+    <Content Include="App_Resources\iOS\icon.png" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <TypeScriptCompile Include="controls\dot\Dot.ts" />
+    <TypeScriptCompile Include="controls\mymodulewithxml\MyControl.ts" />
+    <TypeScriptCompile Include="controls\mymodule\MyControl.ts" />
+    <TypeScriptCompile Include="models\base-entity.ts" />
+    <TypeScriptCompile Include="models\base-types.ts" />
+    <TypeScriptCompile Include="models\enums.ts" />
+    <TypeScriptCompile Include="models\pet.ts" />
+    <TypeScriptCompile Include="models\roof.ts" />
+    <TypeScriptCompile Include="models\user.ts" />
+    <TypeScriptCompile Include="TelerikUI\side-bar\side-bar-common.ts" />
+    <TypeScriptCompile Include="TelerikUI\side-bar\side-bar.android.ts" />
+    <TypeScriptCompile Include="TelerikUI\side-bar\side-bar.d.ts" />
+    <TypeScriptCompile Include="TelerikUI\side-bar\side-bar.ios.ts" />
+    <TypeScriptCompile Include="tns_modules\android17.d.ts" />
+    <TypeScriptCompile Include="tns_modules\application\application.d.ts" />
+    <TypeScriptCompile Include="tns_modules\camera\camera.d.ts" />
+    <TypeScriptCompile Include="tns_modules\color\color.d.ts" />
+    <TypeScriptCompile Include="tns_modules\console\console.d.ts" />
+    <TypeScriptCompile Include="tns_modules\data\observable-array\observable-array.d.ts" />
+    <TypeScriptCompile Include="tns_modules\data\observable\observable.d.ts" />
+    <TypeScriptCompile Include="tns_modules\data\virtual-array\virtual-array.d.ts" />
+    <TypeScriptCompile Include="tns_modules\declarations.android.d.ts" />
+    <TypeScriptCompile Include="tns_modules\declarations.d.ts" />
+    <TypeScriptCompile Include="tns_modules\declarations.ios.d.ts" />
+    <TypeScriptCompile Include="tns_modules\file-system\file-name-resolver.d.ts" />
+    <TypeScriptCompile Include="tns_modules\file-system\file-system-access.d.ts" />
+    <TypeScriptCompile Include="tns_modules\file-system\file-system.d.ts" />
+    <TypeScriptCompile Include="tns_modules\fps-meter\fps-meter.d.ts" />
+    <TypeScriptCompile Include="tns_modules\fps-meter\fps-native.d.ts" />
+    <TypeScriptCompile Include="tns_modules\http\http.d.ts" />
+    <TypeScriptCompile Include="tns_modules\image-source\image-source.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ios.d.ts" />
+    <TypeScriptCompile Include="tns_modules\js-libs\esprima\esprima.d.ts" />
+    <TypeScriptCompile Include="tns_modules\js-libs\reworkcss\reworkcss.d.ts" />
+    <TypeScriptCompile Include="tns_modules\libjs.d.ts" />
+    <TypeScriptCompile Include="tns_modules\local-settings\local-settings.d.ts" />
+    <TypeScriptCompile Include="tns_modules\location\location.d.ts" />
+    <TypeScriptCompile Include="tns_modules\platform\platform.d.ts" />
+    <TypeScriptCompile Include="tns_modules\text\formatted-string.d.ts" />
+    <TypeScriptCompile Include="tns_modules\text\span.d.ts" />
+    <TypeScriptCompile Include="tns_modules\text\text.d.ts" />
+    <TypeScriptCompile Include="tns_modules\timer\timer.d.ts" />
+    <TypeScriptCompile Include="tns_modules\trace\trace.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\activity-indicator\activity-indicator.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\border\border.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\button\button.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\content-view\content-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\bindable.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\control-state-change.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\dependency-observable.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\proxy.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\weak-event-listener.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\date-picker\date-picker.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\dialogs\dialogs.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\editable-text-base\editable-text-base.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\enums\enums.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\frame\frame.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\gestures\gestures.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\image-cache\image-cache.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\image\image.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\label\label.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\absolute-layout\absolute-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\dock-layout\dock-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\grid-layout\grid-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\stack-layout\stack-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\wrap-layout\wrap-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\list-picker\list-picker.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\list-view\list-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\page\page.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\placeholder\placeholder.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\progress\progress.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\scroll-view\scroll-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\search-bar\search-bar.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\segmented-bar\segmented-bar.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\slider\slider.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\css-selector.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\style-property.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\stylers.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\styling.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\visual-state-constants.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\switch\switch.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\tab-view\tab-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\text-base\text-base.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\text-field\text-field.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\text-view\text-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\time-picker\time-picker.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\web-view\web-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\utils\types.d.ts" />
+    <TypeScriptCompile Include="tns_modules\utils\utils.d.ts" />
+    <TypeScriptCompile Include="tns_modules\xml\xml.d.ts" />
+    <TypeScriptCompile Include="view-models\add-comment.ts" />
+    <TypeScriptCompile Include="view-models\add-pet.ts" />
+    <TypeScriptCompile Include="view-models\add-roof.ts" />
+    <TypeScriptCompile Include="view-models\edit-profile.ts" />
+    <TypeScriptCompile Include="view-models\search.ts" />
+    <TypeScriptCompile Include="view-models\login.ts" />
+    <TypeScriptCompile Include="view-models\main.ts" />
+    <TypeScriptCompile Include="view-models\profile.ts" />
+    <TypeScriptCompile Include="view-models\register.ts" />
+    <TypeScriptCompile Include="view-models\test-data.ts" />
+    <TypeScriptCompile Include="views\add-comment.ts" />
+    <TypeScriptCompile Include="views\add-pet.ts" />
+    <TypeScriptCompile Include="views\add-roof.ts" />
+    <TypeScriptCompile Include="views\edit-profile.ts" />
+    <TypeScriptCompile Include="views\login.ts" />
+    <TypeScriptCompile Include="views\demo.ts" />
+    <TypeScriptCompile Include="views\main.ts" />
+    <TypeScriptCompile Include="views\profile.ts" />
+    <TypeScriptCompile Include="views\register.ts" />
+    <TypeScriptCompile Include="views\pet.ts" />
+    <TypeScriptCompile Include="views\search.ts" />
+    <TypeScriptCompile Include="views\roof.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-nodpi\" />
+    <Folder Include="App_Resources\Android\drawable-nodpi\" />
+    <Folder Include="App_Resources\Android\drawable-xhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-xxhdpi\" />
+    <Folder Include="App_Resources\Android\drawable-xxxhdpi\" />
+    <Folder Include="App_Resources\Android\values-v21\" />
+    <Folder Include="App_Resources\Android\values\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="controls\dot\" />
+    <Folder Include="controls\mymodulewithxml\" />
+    <Folder Include="controls\mymodule\" />
+    <Folder Include="lib\" />
+    <Folder Include="models\" />
+    <Folder Include="controls\" />
+    <Folder Include="res\" />
+    <Folder Include="TelerikUI\" />
+    <Folder Include="TelerikUI\side-bar\" />
+    <Folder Include="tns_modules\" />
+    <Folder Include="tns_modules\application\" />
+    <Folder Include="tns_modules\camera\" />
+    <Folder Include="tns_modules\color\" />
+    <Folder Include="tns_modules\console\" />
+    <Folder Include="tns_modules\data\" />
+    <Folder Include="tns_modules\data\observable-array\" />
+    <Folder Include="tns_modules\data\observable\" />
+    <Folder Include="tns_modules\data\virtual-array\" />
+    <Folder Include="tns_modules\file-system\" />
+    <Folder Include="tns_modules\fps-meter\" />
+    <Folder Include="tns_modules\globals\" />
+    <Folder Include="tns_modules\http\" />
+    <Folder Include="tns_modules\image-source\" />
+    <Folder Include="tns_modules\js-libs\" />
+    <Folder Include="tns_modules\js-libs\easysax\" />
+    <Folder Include="tns_modules\js-libs\esprima\" />
+    <Folder Include="tns_modules\js-libs\polymer-expressions\" />
+    <Folder Include="tns_modules\js-libs\reworkcss\" />
+    <Folder Include="tns_modules\local-settings\" />
+    <Folder Include="tns_modules\location\" />
+    <Folder Include="tns_modules\platform\" />
+    <Folder Include="tns_modules\text\" />
+    <Folder Include="tns_modules\timer\" />
+    <Folder Include="tns_modules\trace\" />
+    <Folder Include="tns_modules\ui\" />
+    <Folder Include="tns_modules\ui\activity-indicator\" />
+    <Folder Include="tns_modules\ui\border\" />
+    <Folder Include="tns_modules\ui\builder\" />
+    <Folder Include="tns_modules\ui\button\" />
+    <Folder Include="tns_modules\ui\content-view\" />
+    <Folder Include="tns_modules\ui\core\" />
+    <Folder Include="tns_modules\ui\date-picker\" />
+    <Folder Include="tns_modules\ui\dialogs\" />
+    <Folder Include="tns_modules\ui\editable-text-base\" />
+    <Folder Include="tns_modules\ui\enums\" />
+    <Folder Include="tns_modules\ui\frame\" />
+    <Folder Include="tns_modules\ui\gestures\" />
+    <Folder Include="tns_modules\ui\image-cache\" />
+    <Folder Include="tns_modules\ui\image\" />
+    <Folder Include="tns_modules\ui\label\" />
+    <Folder Include="tns_modules\ui\layouts\" />
+    <Folder Include="tns_modules\ui\layouts\absolute-layout\" />
+    <Folder Include="tns_modules\ui\layouts\dock-layout\" />
+    <Folder Include="tns_modules\ui\layouts\grid-layout\" />
+    <Folder Include="tns_modules\ui\layouts\stack-layout\" />
+    <Folder Include="tns_modules\ui\layouts\wrap-layout\" />
+    <Folder Include="tns_modules\ui\list-picker\" />
+    <Folder Include="tns_modules\ui\list-view\" />
+    <Folder Include="tns_modules\ui\page\" />
+    <Folder Include="tns_modules\ui\placeholder\" />
+    <Folder Include="tns_modules\ui\progress\" />
+    <Folder Include="tns_modules\ui\scroll-view\" />
+    <Folder Include="tns_modules\ui\search-bar\" />
+    <Folder Include="tns_modules\ui\segmented-bar\" />
+    <Folder Include="tns_modules\ui\slider\" />
+    <Folder Include="tns_modules\ui\styling\" />
+    <Folder Include="tns_modules\ui\switch\" />
+    <Folder Include="tns_modules\ui\tab-view\" />
+    <Folder Include="tns_modules\ui\text-base\" />
+    <Folder Include="tns_modules\ui\text-field\" />
+    <Folder Include="tns_modules\ui\text-view\" />
+    <Folder Include="tns_modules\ui\time-picker\" />
+    <Folder Include="tns_modules\ui\web-view\" />
+    <Folder Include="tns_modules\utils\" />
+    <Folder Include="tns_modules\xml\" />
+    <Folder Include="view-models\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bootstrap.js" />
+    <Compile Include="lib\everlive.js" />
+    <Compile Include="lib\identity-provider.js" />
+    <Compile Include="tns_modules\application\application-common.js" />
+    <Compile Include="tns_modules\application\application.android.js" />
+    <Compile Include="tns_modules\application\application.ios.js" />
+    <Compile Include="tns_modules\camera\camera.android.js" />
+    <Compile Include="tns_modules\camera\camera.ios.js" />
+    <Compile Include="tns_modules\color\color-common.js" />
+    <Compile Include="tns_modules\color\color.android.js" />
+    <Compile Include="tns_modules\color\color.ios.js" />
+    <Compile Include="tns_modules\color\known-colors.js" />
+    <Compile Include="tns_modules\console\console-native.android.js" />
+    <Compile Include="tns_modules\console\console-native.ios.js" />
+    <Compile Include="tns_modules\console\console.js" />
+    <Compile Include="tns_modules\data\observable-array\observable-array.js" />
+    <Compile Include="tns_modules\data\observable\observable.js" />
+    <Compile Include="tns_modules\data\virtual-array\virtual-array.js" />
+    <Compile Include="tns_modules\file-system\file-name-resolver.js" />
+    <Compile Include="tns_modules\file-system\file-system-access.android.js" />
+    <Compile Include="tns_modules\file-system\file-system-access.ios.js" />
+    <Compile Include="tns_modules\file-system\file-system.js" />
+    <Compile Include="tns_modules\fps-meter\fps-meter.js" />
+    <Compile Include="tns_modules\fps-meter\fps-native.android.js" />
+    <Compile Include="tns_modules\fps-meter\fps-native.ios.js" />
+    <Compile Include="tns_modules\globals\globals.js" />
+    <Compile Include="tns_modules\http\http-request.android.js" />
+    <Compile Include="tns_modules\http\http-request.ios.js" />
+    <Compile Include="tns_modules\http\http.js" />
+    <Compile Include="tns_modules\image-source\image-source-common.js" />
+    <Compile Include="tns_modules\image-source\image-source.android.js" />
+    <Compile Include="tns_modules\image-source\image-source.ios.js" />
+    <Compile Include="tns_modules\js-libs\easysax\easysax.js" />
+    <Compile Include="tns_modules\js-libs\esprima\esprima.js" />
+    <Compile Include="tns_modules\js-libs\polymer-expressions\path-parser.js" />
+    <Compile Include="tns_modules\js-libs\polymer-expressions\polymer-expressions.js" />
+    <Compile Include="tns_modules\js-libs\reworkcss\reworkcss.js" />
+    <Compile Include="tns_modules\local-settings\local-settings-common.js" />
+    <Compile Include="tns_modules\local-settings\local-settings.android.js" />
+    <Compile Include="tns_modules\local-settings\local-settings.ios.js" />
+    <Compile Include="tns_modules\location\location-common.js" />
+    <Compile Include="tns_modules\location\location.android.js" />
+    <Compile Include="tns_modules\location\location.ios.js" />
+    <Compile Include="tns_modules\platform\platform.android.js" />
+    <Compile Include="tns_modules\platform\platform.ios.js" />
+    <Compile Include="tns_modules\text\formatted-string-common.js" />
+    <Compile Include="tns_modules\text\formatted-string.android.js" />
+    <Compile Include="tns_modules\text\formatted-string.ios.js" />
+    <Compile Include="tns_modules\text\span-common.js" />
+    <Compile Include="tns_modules\text\span.android.js" />
+    <Compile Include="tns_modules\text\span.ios.js" />
+    <Compile Include="tns_modules\text\text.android.js" />
+    <Compile Include="tns_modules\text\text.ios.js" />
+    <Compile Include="tns_modules\timer\timer.android.js" />
+    <Compile Include="tns_modules\timer\timer.ios.js" />
+    <Compile Include="tns_modules\trace\trace.js" />
+    <Compile Include="tns_modules\ui\activity-indicator\activity-indicator-common.js" />
+    <Compile Include="tns_modules\ui\activity-indicator\activity-indicator.android.js" />
+    <Compile Include="tns_modules\ui\activity-indicator\activity-indicator.ios.js" />
+    <Compile Include="tns_modules\ui\border\border-common.js" />
+    <Compile Include="tns_modules\ui\border\border.android.js" />
+    <Compile Include="tns_modules\ui\border\border.ios.js" />
+    <Compile Include="tns_modules\ui\builder\binding-builder.js" />
+    <Compile Include="tns_modules\ui\builder\builder.js" />
+    <Compile Include="tns_modules\ui\builder\component-builder.js" />
+    <Compile Include="tns_modules\ui\builder\template-builder.js" />
+    <Compile Include="tns_modules\ui\button\button-common.js" />
+    <Compile Include="tns_modules\ui\button\button.android.js" />
+    <Compile Include="tns_modules\ui\button\button.ios.js" />
+    <Compile Include="tns_modules\ui\content-view\content-view.js" />
+    <Compile Include="tns_modules\ui\core\bindable.js" />
+    <Compile Include="tns_modules\ui\core\control-state-change.ios.js" />
+    <Compile Include="tns_modules\ui\core\dependency-observable.js" />
+    <Compile Include="tns_modules\ui\core\proxy.js" />
+    <Compile Include="tns_modules\ui\core\view-common.js" />
+    <Compile Include="tns_modules\ui\core\view.android.js" />
+    <Compile Include="tns_modules\ui\core\view.ios.js" />
+    <Compile Include="tns_modules\ui\core\weak-event-listener.js" />
+    <Compile Include="tns_modules\ui\date-picker\date-picker-common.js" />
+    <Compile Include="tns_modules\ui\date-picker\date-picker.android.js" />
+    <Compile Include="tns_modules\ui\date-picker\date-picker.ios.js" />
+    <Compile Include="tns_modules\ui\dialogs\dialogs-common.js" />
+    <Compile Include="tns_modules\ui\dialogs\dialogs.android.js" />
+    <Compile Include="tns_modules\ui\dialogs\dialogs.ios.js" />
+    <Compile Include="tns_modules\ui\editable-text-base\editable-text-base-common.js" />
+    <Compile Include="tns_modules\ui\editable-text-base\editable-text-base.android.js" />
+    <Compile Include="tns_modules\ui\editable-text-base\editable-text-base.ios.js" />
+    <Compile Include="tns_modules\ui\enums\enums.js" />
+    <Compile Include="tns_modules\ui\frame\frame-common.js" />
+    <Compile Include="tns_modules\ui\frame\frame.android.js" />
+    <Compile Include="tns_modules\ui\frame\frame.ios.js" />
+    <Compile Include="tns_modules\ui\gestures\gestures-common.js" />
+    <Compile Include="tns_modules\ui\gestures\gestures.android.js" />
+    <Compile Include="tns_modules\ui\gestures\gestures.ios.js" />
+    <Compile Include="tns_modules\ui\image-cache\image-cache-common.js" />
+    <Compile Include="tns_modules\ui\image-cache\image-cache.android.js" />
+    <Compile Include="tns_modules\ui\image-cache\image-cache.ios.js" />
+    <Compile Include="tns_modules\ui\image\image-common.js" />
+    <Compile Include="tns_modules\ui\image\image.android.js" />
+    <Compile Include="tns_modules\ui\image\image.ios.js" />
+    <Compile Include="tns_modules\ui\label\label-common.js" />
+    <Compile Include="tns_modules\ui\label\label.android.js" />
+    <Compile Include="tns_modules\ui\label\label.ios.js" />
+    <Compile Include="tns_modules\ui\layouts\absolute-layout\absolute-layout.js" />
+    <Compile Include="tns_modules\ui\layouts\dock-layout\dock-layout.js" />
+    <Compile Include="tns_modules\ui\layouts\grid-layout\grid-layout.js" />
+    <Compile Include="tns_modules\ui\layouts\layout.js" />
+    <Compile Include="tns_modules\ui\layouts\stack-layout\stack-layout.js" />
+    <Compile Include="tns_modules\ui\layouts\wrap-layout\wrap-layout.js" />
+    <Compile Include="tns_modules\ui\list-picker\list-picker-common.js" />
+    <Compile Include="tns_modules\ui\list-picker\list-picker.android.js" />
+    <Compile Include="tns_modules\ui\list-picker\list-picker.ios.js" />
+    <Compile Include="tns_modules\ui\list-view\list-view-common.js" />
+    <Compile Include="tns_modules\ui\list-view\list-view.android.js" />
+    <Compile Include="tns_modules\ui\list-view\list-view.ios.js" />
+    <Compile Include="tns_modules\ui\page\page-common.js" />
+    <Compile Include="tns_modules\ui\page\page.android.js" />
+    <Compile Include="tns_modules\ui\page\page.ios.js" />
+    <Compile Include="tns_modules\ui\placeholder\placeholder-common.js" />
+    <Compile Include="tns_modules\ui\placeholder\placeholder.android.js" />
+    <Compile Include="tns_modules\ui\placeholder\placeholder.ios.js" />
+    <Compile Include="tns_modules\ui\progress\progress-common.js" />
+    <Compile Include="tns_modules\ui\progress\progress.android.js" />
+    <Compile Include="tns_modules\ui\progress\progress.ios.js" />
+    <Compile Include="tns_modules\ui\scroll-view\scroll-view-common.js" />
+    <Compile Include="tns_modules\ui\scroll-view\scroll-view.android.js" />
+    <Compile Include="tns_modules\ui\scroll-view\scroll-view.ios.js" />
+    <Compile Include="tns_modules\ui\search-bar\search-bar-common.js" />
+    <Compile Include="tns_modules\ui\search-bar\search-bar.android.js" />
+    <Compile Include="tns_modules\ui\search-bar\search-bar.ios.js" />
+    <Compile Include="tns_modules\ui\segmented-bar\segmented-bar-common.js" />
+    <Compile Include="tns_modules\ui\segmented-bar\segmented-bar.android.js" />
+    <Compile Include="tns_modules\ui\segmented-bar\segmented-bar.ios.js" />
+    <Compile Include="tns_modules\ui\slider\slider-common.js" />
+    <Compile Include="tns_modules\ui\slider\slider.android.js" />
+    <Compile Include="tns_modules\ui\slider\slider.ios.js" />
+    <Compile Include="tns_modules\ui\styling\converters.js" />
+    <Compile Include="tns_modules\ui\styling\css-selector.js" />
+    <Compile Include="tns_modules\ui\styling\style-property.js" />
+    <Compile Include="tns_modules\ui\styling\style-scope.js" />
+    <Compile Include="tns_modules\ui\styling\style.js" />
+    <Compile Include="tns_modules\ui\styling\stylers-common.js" />
+    <Compile Include="tns_modules\ui\styling\stylers.android.js" />
+    <Compile Include="tns_modules\ui\styling\stylers.ios.js" />
+    <Compile Include="tns_modules\ui\styling\styling.js" />
+    <Compile Include="tns_modules\ui\styling\visual-state-constants.js" />
+    <Compile Include="tns_modules\ui\styling\visual-state.js" />
+    <Compile Include="tns_modules\ui\switch\switch-common.js" />
+    <Compile Include="tns_modules\ui\switch\switch.android.js" />
+    <Compile Include="tns_modules\ui\switch\switch.ios.js" />
+    <Compile Include="tns_modules\ui\tab-view\tab-view-common.js" />
+    <Compile Include="tns_modules\ui\tab-view\tab-view.android.js" />
+    <Compile Include="tns_modules\ui\tab-view\tab-view.ios.js" />
+    <Compile Include="tns_modules\ui\text-base\text-base.js" />
+    <Compile Include="tns_modules\ui\text-field\text-field-common.js" />
+    <Compile Include="tns_modules\ui\text-field\text-field.android.js" />
+    <Compile Include="tns_modules\ui\text-field\text-field.ios.js" />
+    <Compile Include="tns_modules\ui\text-view\text-view-common.js" />
+    <Compile Include="tns_modules\ui\text-view\text-view.android.js" />
+    <Compile Include="tns_modules\ui\text-view\text-view.ios.js" />
+    <Compile Include="tns_modules\ui\time-picker\time-picker-common.js" />
+    <Compile Include="tns_modules\ui\time-picker\time-picker.android.js" />
+    <Compile Include="tns_modules\ui\time-picker\time-picker.ios.js" />
+    <Compile Include="tns_modules\ui\web-view\web-view-common.js" />
+    <Compile Include="tns_modules\ui\web-view\web-view.android.js" />
+    <Compile Include="tns_modules\ui\web-view\web-view.ios.js" />
+    <Compile Include="tns_modules\utils\android_constants.js" />
+    <Compile Include="tns_modules\utils\module-merge.js" />
+    <Compile Include="tns_modules\utils\number-utils.js" />
+    <Compile Include="tns_modules\utils\types.js" />
+    <Compile Include="tns_modules\utils\utils-common.js" />
+    <Compile Include="tns_modules\utils\utils.android.js" />
+    <Compile Include="tns_modules\utils\utils.ios.js" />
+    <Compile Include="tns_modules\xml\xml.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,66 @@
+<Page navigatedTo="pageNavigatedTo">
+  <GridLayout rows="auto, *">
+    <GridLayout cssClass="action-bar" columns="auto, *">
+      <Image stretch="none" cssClass="icon-menu" tap="back" src="res://ic_arrow_back"/>
+      <Label text="Pet" cssClass="action-bar-title" colSpan="3"/>
+    </GridLayout>
+
+    <ScrollView row="1">
+      <StackLayout>
+        <StackLayout cssClass="pet-header">
+          <Label cssClass="pet-header-title" text="{{ Name }}" textWrap="true"/>
+        </StackLayout>
+
+        <GridLayout cssClass="pet">
+          <Image src="{{ Picture }}" stretch="aspectFill"/>
+
+          <AbsoluteLayout>
+            <Image src="~/res/arrow-down.png" left="30" top="0" width="20" />
+            <Image src="{{ Type == 0 ? '~/res/pets.png' : ( Type == 1 ? '~/res/cat.png' : '~/res/dog.png') }}" left="25" top="20" width="30" />
+          </AbsoluteLayout>
+        </GridLayout>
+
+        <StackLayout cssClass="pet-info">
+          <StackLayout orientation="horizontal">
+            <Label text="Kind" cssClass="pet-info-label"/>
+            <GridLayout>
+              <Label cssClass="pet-info-value" text="{{ Type == 0 ? 'n/a' : ( Type == 1 ? 'Cat' : 'Dog') }}"/>
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <StackLayout orientation="horizontal">
+            <Label text="Breed" cssClass="pet-info-label" />
+            <GridLayout>
+              <Label cssClass="pet-info-value" text="{{ Breed }}"/>
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <StackLayout orientation="horizontal">
+            <Label text="Gender" cssClass="pet-info-label"/>
+            <GridLayout>
+              <Label cssClass="pet-info-value" text="{{ Gender == 0 ? 'n/a' : ( Gender == 1 ? 'male' : 'female') }}"/>
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <StackLayout orientation="horizontal">
+            <Label text="Age" cssClass="pet-info-label"/>
+            <GridLayout>
+              <Label cssClass="pet-info-value mod-price" text="{{ Age }}"/>
+            </GridLayout>
+          </StackLayout>
+
+          <StackLayout cssClass="description">
+            <StackLayout cssClass="horizontal-line"/>
+            <Label text="Little more about the pet" cssClass="description-label"/>
+
+            <StackLayout cssClass="horizontal-line" style="margin: 10 50"/>
+            <Label text="{{ Description }}" textWrap="true"/>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+</Page>

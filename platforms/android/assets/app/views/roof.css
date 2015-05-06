@@ -1,0 +1,37 @@
+.roof {
+    background-color: #ffffff;
+    height: 250;
+}
+
+.roof-header {
+    background-color: #F5F6F5;
+    padding: 15 20;
+    font-size: 20;
+}
+
+.roof-info {
+    font-size: 18;
+    margin: 10 15;
+}
+
+.roof-info-label {
+    horizontal-align: left;
+    color: #929292;
+}
+
+.roof-info-value {
+    horizontal-align: right;
+}
+
+.description {
+    text-align: center;
+}
+
+.description-label{
+    horizontal-align: center;
+    color: #929292;
+}
+
+.mod-price {
+    color: #FD5858;
+}

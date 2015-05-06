@@ -1,0 +1,165 @@
+/*
+    We follow Trello CSS guide
+    https://gist.github.com/bobbygrace/9e961e8982f42eb91b80
+*/
+
+/*Highlite color (red) - fd5858
+Titles background light grey color - f5f6f5
+Login with FB blue color - 3581b0
+Rounded login button color - 58fd87
+Dark grey color (main categories Pets or Roofs - only in Profile) - 929292
+Dividers, separators light grey color - dfe0df*/
+
+/* region Widgets */
+
+Page {
+    background-color: #F7F4ED;
+}
+
+Label {
+    color: #55443B;
+}
+
+TextField, TextView {
+    margin: 8;
+    /*color: #95938F;*/
+    color: #ffffff;
+}
+
+ActivityIndicator {
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+ListView {
+}
+
+Button {
+    margin: 10;
+    padding: 10;
+    color: #ffffff;
+    background-color: #3598db;
+}
+
+    /*not working*/
+    Button:hover, button:pressed {
+        opacity: 0.8;
+    }
+
+    Button.disabled {
+        background-color: transparent !important;
+        border: 1px solid white;
+        opacity: 0.3;
+    }
+
+/*#endregion */
+
+/*#region Utils */
+
+.u-stretch {
+    horizontal-align: stretch;
+    vertical-align: stretch;
+}
+
+.u-left {
+    horizontal-align: left;
+}
+
+.u-right {
+    horizontal-align: right;
+}
+
+.u-center {
+    horizontal-align: center;
+}
+
+/*#endregion */
+
+/*#region App Bar & Page Title */
+
+.action-bar {
+    height: 48;
+    background-color: #FD5858;
+}
+
+.action-bar-title {    
+    horizontal-align: center;
+    vertical-align: center;
+    font-size: 20;
+    color: white;
+}
+
+.page-title {
+    font-size: 18;
+    margin: 15;
+    horizontal-align: center;
+    color: #FD5858;
+}
+
+.action-left-image {
+    vertical-align: center;
+    horizontal-align: left;
+}
+
+.icon-menu {
+    vertical-align: center;    
+    margin: 0 16;
+}
+
+/*#endregion */
+
+
+.logoImage {
+    margin: 30 0 20 0;
+    width: 100;
+    height: 100;
+    horizontal-align: center;
+}
+
+.header {
+    font-size: 24;
+    margin: 10;
+}
+
+.title {
+    font-size: 22;
+    color: black;
+}
+
+.horizontal-line {
+    height: 1;
+    background-color: #929292;
+    vertical-align: center;
+    margin: 10 0
+}
+
+/*region Icons*/
+
+/*no option to stretch the background for now*/
+/*.arrow-down-icon {
+    background-image: url('~/res/arrow-down.png');
+    width: 14px;
+    height: 7px;
+}
+
+.dog-icon {
+    background-image: url('~/res/dog.png');
+    width: 49px;
+    height: 48px;
+}*/
+
+/*endregion*/
+
+.delete-btn {
+    display: block;
+    text-align: center;
+    background-color: #e84c3d;
+}
+
+.favourite-wrap {
+    horizontal-align: left;
+    padding: 16;
+    width: 52;
+    height: 52;
+    margin-right: 20;
+}    

@@ -1,0 +1,95 @@
+<Page navigatedTo="pageNavigatedTo">
+  <GridLayout rows="auto, *">    
+    <GridLayout cssClass="action-bar" columns="auto, *, auto">
+      <Image stretch="none" cssClass="icon-menu" tap="back" src="res://ic_arrow_back"/>
+      <Label text="{{ actionBarTitle }}" cssClass="action-bar-title" colSpan="3"/>
+      <Image stretch="none" cssClass="icon-menu" tap="showFilters" src="res://ic_search" col="2"/>
+    </GridLayout>
+
+    <ActivityIndicator busy="{{ isBusy }}" row="1" />
+
+    <StackLayout row="1">
+      <StackLayout style="{{ visibleFilters ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label cssClass="page-title" textWrap="true">
+          <Label.formattedText>
+            <FormattedString>
+              <FormattedString.spans>
+                <Span text="What are you looking for" fontAttributes="Bold" />
+              </FormattedString.spans>
+            </FormattedString>
+          </Label.formattedText>
+        </Label>
+
+        <ScrollView>
+          <StackLayout cssClass="filters">
+            <StackLayout>
+              <Label text="Type of roof" cssClass="filter-title"/>
+              <GridLayout columns="*, auto" cssClass="filter">
+                <Label text="Apartment" cssClass="filter-label"/>
+                <Switch checked="{{ filters.roofs.apartment }}" col="1"/>
+              </GridLayout>
+              <GridLayout columns="*, auto" cssClass="filter">
+                <Label text="House" cssClass="filter-label"/>
+                <Switch checked="{{ filters.roofs.house }}" col="1"/>
+              </GridLayout>
+              <GridLayout columns="*, auto" cssClass="filter">
+                <Label text="Hotel" cssClass="filter-label"/>
+                <Switch checked="{{ filters.roofs.hotel }}" col="1"/>
+              </GridLayout>
+            </StackLayout>
+            <StackLayout cssClass="horizontal-line"/>
+            <StackLayout>
+              <Label text="Pets allowed" cssClass="filter-title"/>
+              <GridLayout columns="*, auto" cssClass="filter">
+                <Label text="All" cssClass="filter-label"/>
+                <Switch checked="{{ filters.pets.all }}" col="1"/>
+              </GridLayout>
+              <GridLayout columns="*, auto" cssClass="filter">
+                <Label text="Cats" cssClass="filter-label"/>
+                <Switch checked="{{ filters.pets.cats }}" col="1"/>
+              </GridLayout>
+              <GridLayout columns="*, auto" cssClass="filter">
+                <Label text="Dogs" cssClass="filter-label"/>
+                <Switch checked="{{ filters.pets.dogs }}" col="1"/>
+              </GridLayout>
+            </StackLayout>
+          </StackLayout>
+        </ScrollView>
+      </StackLayout>
+
+      <StackLayout style="{{ !visibleFilters ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <SearchBar id="search" hint="city" text="{{ searchQuery }}" submit="{{ search }}" cleat="{{ search }}" />
+
+        <ListView items="{{ roofItems }}" itemTap="{{ showRoof }}">
+          <ListView.itemTemplate>
+            <GridLayout cssClass="roof" columns="100, *, auto" rows="60, 250, 55">
+              <StackLayout cssClass="roof-header" colSpan="3" row="0">
+                <Label cssClass="roof-header-title" text="{{ Title || 'Loading...' }}"/>
+              </StackLayout>
+
+              <Image src="{{ Picture }}" stretch="aspectFill" colSpan="3" row="1" />
+
+              <GridLayout cssClass="roof-info" columns="*, 10, *, 10, 2*" colSpan="3" col="0" row="2">
+                <Label cssClass="roof-info-item" text="{{ Type == 1 ? 'House' : ( Type == 2 ? 'Apartment' : 'Hotel') }}" col="0"/>
+                <Label cssClass="roof-info-item" text="-" col="1"/>
+                <Label cssClass="roof-info-item" text="{{ PetType == 1 ? 'All' : ( PetType == 2 ? 'Dogs only' : 'Cats only') }}" col="2"/>
+                <Label cssClass="roof-info-item" text="-" col="3"/>
+                <Label cssClass="roof-info-item" text="{{ Address }}" col="4"/>
+              </GridLayout>
+
+              <StackLayout cssClass="roof-price"  col="2" row="1">
+                <Label text="{{ Price  + '$/day' || 'n/a' }}"/>
+              </StackLayout>
+
+              <AbsoluteLayout col="0" row="1" rowSpan="2">
+                <Image src="~/res/arrow-down.png" left="30" top="0" width="20" />
+
+                <Image src="{{ Type == 1 ? '~/res/house.png' : ( Type == 2 ? '~/res/apartment.png' : '~/res/hotel.png') }}" left="25" top="20" width="30" />
+              </AbsoluteLayout>
+            </GridLayout>
+          </ListView.itemTemplate>
+        </ListView>
+      </StackLayout>
+    </StackLayout>
+  </GridLayout>
+</Page>

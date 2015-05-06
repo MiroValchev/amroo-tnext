@@ -1,0 +1,80 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:tsb="/TelerikUI/side-bar"
+      xmlns:customControls="controls/dot"
+      navigatedTo="pageNavigatedTo">
+  <tsb:SideBar title="Amroo" id="sideBar">
+    <tsb:SideBar.slideContent>
+      <GridLayout cssClass="page">
+        <Image src="~/res/bkg-smalldef.jpg" stretch="aspectFill"/>
+        <StackLayout>
+          <Image src="~/res/logo.png" cssClass="logoImage" stretch="aspectFit"/>
+          <Label cssClass="menu-item" text="Profile" tap="showProfile" />
+          <Label cssClass="menu-item" text="Add your roof" tap="addRoof" />
+          <Label cssClass="menu-item" text="Add your pet" tap="addPet" />
+          <Label cssClass="menu-item" text="Logout" tap="logout" />
+        </StackLayout>
+      </GridLayout>
+    </tsb:SideBar.slideContent>
+
+    <tsb:SideBar.mainContent>
+      <GridLayout rows="auto, *">
+        <StackLayout>
+          <GridLayout cssClass="action-bar" columns="auto, *, auto">
+            <Image stretch="none" cssClass="icon-menu" tap="showSlideout" src="res://ic_menu"/>
+            <Label text="{{ actionBarTitle }}" cssClass="action-bar-title" colSpan="3"/>
+            <Image stretch="none" cssClass="icon-menu" tap="showSearch" src="res://ic_search" col="2"/>
+          </GridLayout>
+
+          <Label cssClass="page-title" textWrap="true">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="Showing you available roofs" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+        </StackLayout>
+
+        <ActivityIndicator busy="{{ isBusy }}" row="1" />
+
+        <StackLayout row="1">
+          <ListView items="{{ roofItems }}" itemTap="{{ showRoof }}">
+            <ListView.itemTemplate>
+              <GridLayout cssClass="roof" columns="100, *, auto" rows="60, 250, 55">
+                <StackLayout cssClass="roof-header" colSpan="3" row="0">
+                  <Label cssClass="roof-header-title" text="{{ Title || 'Loading...' }}"/>
+                </StackLayout>
+
+                <Image src="{{ Picture }}" stretch="aspectFill" colSpan="3" row="1" />
+
+                <GridLayout cssClass="roof-info" columns="*, 10, *, 10, 2*" colSpan="3" col="0" row="2">
+                  <Label cssClass="roof-info-item" text="{{ Type == 1 ? 'House' : ( Type == 2 ? 'Apartment' : 'Hotel') }}" col="0"/>
+
+                  <!--can't nest custom controls for now-->
+                  <!--<customControls:Dot col="1"/>-->
+                  <Label cssClass="roof-info-item" text="-" col="1"/>
+                  <Label cssClass="roof-info-item" text="{{ PetType == 1 ? 'All' : ( PetType == 2 ? 'Dogs only' : 'Cats only') }}" col="2"/>
+                  <Label cssClass="roof-info-item" text="-" col="3"/>
+                  <Label cssClass="roof-info-item" text="{{ Address }}" col="4"/>
+                </GridLayout>
+
+                <StackLayout cssClass="roof-price"  col="2" row="1">
+                  <Label text="{{ Price  + '$/day' || 'n/a' }}"/>
+                </StackLayout>
+
+                <AbsoluteLayout col="0" row="1" rowSpan="2">
+                  <Image src="~/res/arrow-down.png" left="30" top="0" width="20" />
+
+                  <Image src="{{ Type == 1 ? '~/res/house.png' : ( Type == 2 ? '~/res/apartment.png' : '~/res/hotel.png') }}" left="25" top="20" width="30" />
+
+                  <!--<Image src="{{ User.PictureUrl }}" stretch="aspectFill" left="30" top="210"/>-->
+                </AbsoluteLayout>
+              </GridLayout>
+            </ListView.itemTemplate>
+          </ListView>
+        </StackLayout>
+      </GridLayout>
+    </tsb:SideBar.mainContent>
+  </tsb:SideBar>
+</Page>

@@ -1,0 +1,70 @@
+<Page navigatedTo="pageNavigatedTo">
+  <GridLayout rows="auto, *">
+    <GridLayout cssClass="action-bar" columns="auto, *">
+      <Image stretch="none" cssClass="icon-menu" tap="back" src="res://ic_arrow_back"/>
+      <Label text="New Pet" cssClass="action-bar-title" colSpan="3"/>
+    </GridLayout>
+
+    <GridLayout row="1">
+      <Image src="~/res/bkg-smalldef.jpg" stretch="aspectFill"/>
+      <ActivityIndicator busy="{{ isBusy }}"/>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'title') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="Type in the name of your loving pet." cssClass="section-title" textWrap="true"/>
+        <TextField hint="name" text="{{ pet.Name }}"/>
+        <Button id="type" text="Next" tap="{{ next }}"/>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'type') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="What is it?" cssClass="section-title" textWrap="true"/>
+        <ListView items="{{ petTypes }}" itemTap="{{ selectType }}">
+          <ListView.itemTemplate>
+            <GridLayout>
+              <StackLayout cssClass="list-item">
+                <Label text="{{ value }}" />
+              </StackLayout>
+            </GridLayout>
+          </ListView.itemTemplate>
+        </ListView>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'gender') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="Boy or a girl?" cssClass="section-title" textWrap="true"/>
+        <ListView items="{{ petGenders }}" itemTap="{{ selectGender }}">
+          <ListView.itemTemplate>
+            <GridLayout>
+              <StackLayout cssClass="list-item">
+                <Label text="{{ value }}" />
+              </StackLayout>
+            </GridLayout>
+          </ListView.itemTemplate>
+        </ListView>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'breed') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="What breed?" cssClass="section-title" textWrap="true"/>
+        <TextField hint="Breed" text="{{ pet.Breed }}"/>
+        <Button text="Next" id="description" tap="{{ next }}"/>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'description') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="Tell us more about your pet" cssClass="section-title" textWrap="true"/>
+        <TextView hint="It love's to chase after its tale ..." text="{{ pet.Description }}"/>
+        <Button text="Next" id="picture" tap="{{ next }}"/>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'picture') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <GridLayout rows="auto, *, 150">
+          <Label text="Why not take a picture?" cssClass="section-title" textWrap="true"/>
+
+          <Image src="{{ photo }}" row="1" cssClass="photoPreview"/>
+
+          <StackLayout row="2">
+            <Button text="Take a picture" tap="{{ takePicture }}"/>
+            <Button text="Enough already" tap="{{ save }}"/>
+          </StackLayout>
+        </GridLayout>
+      </StackLayout>
+    </GridLayout>
+  </GridLayout>
+</Page>

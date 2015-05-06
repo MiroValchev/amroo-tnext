@@ -1,0 +1,57 @@
+.user {
+    text-align: center;    
+}
+
+.user-picture {
+    height: 150;
+    width: 150;
+    margin: 30 0 25 0;
+}
+
+.user-title {
+    font-size: 20;
+    color: #ffffff;
+}
+
+.edit-btn{
+    vertical-align: bottom;
+    margin-bottom: 30;
+}
+
+.section-title {
+    color: #929292;
+    font-size: 20;
+    margin-left: 10;
+    vertical-align: center;
+}
+
+.roof, .pet {
+    height: 250;
+}
+
+.pet-title, .roof-title {
+    font-size: 20;
+    color: #dfe0df;
+}
+
+.pet-label, .roof-label {
+    color: #929292;
+}
+
+.roof-info, .pet-info {
+    font-size: 18;
+    text-align: center;
+    vertical-align: center;
+}
+
+.pet-info-section, .roof-info-section {
+    height: 50;
+}
+
+.roof-price {
+    padding: 0 20;
+    background-color: #FD5858;
+    font-size: 18;
+    color: white;
+    horizontal-align: right;
+}

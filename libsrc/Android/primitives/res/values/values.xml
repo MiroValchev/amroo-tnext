@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PointerLayout"><attr format="dimension" name="pointerSize"/><attr format="dimension" name="pointerMargin"/><attr format="color" name="pointerFill"/></declare-styleable>
+    <declare-styleable name="RadScrollView"><attr format="boolean" name="fillViewport"/><attr name="scrollMode"><flag name="vertical" value="1"/><flag name="horizontal" value="2"/></attr></declare-styleable>
+    <declare-styleable name="RadScrollViewTheme"><attr format="reference" name="radScrollViewStyle"/></declare-styleable>
+    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_Release/workspace/Primitives/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="legend_stroke_width">1dp</dimen>
+    <!-- From: file:/C:/Program%20Files%20(x86)/Jenkins/jobs/BuildAll_Release/workspace/Primitives/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="RadScrollViewStyle">
+        <item name="fillViewport">false</item>
+        <item name="scrollMode">vertical</item>
+    </style>
+    <style name="RadScrollViewTheme">
+        <item name="radScrollViewStyle">@style/RadScrollViewStyle</item>
+    </style>
+</resources>

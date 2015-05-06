@@ -1,0 +1,78 @@
+<Page navigatedTo="pageNavigatedTo">
+  <GridLayout rows="auto, *">
+    <GridLayout cssClass="action-bar" columns="auto, *">
+      <Image stretch="none" cssClass="icon-menu" tap="back" src="res://ic_arrow_back"/>
+      <Label text="New Roof" cssClass="action-bar-title" colSpan="3"/>
+    </GridLayout>
+
+    <GridLayout row="1">
+      <Image src="~/res/bkg-smalldef.jpg" stretch="aspectFill"/>
+
+      <ActivityIndicator busy="{{ isBusy }}"/>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'title') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="How should we call it?" cssClass="section-title" textWrap="true" />
+        <TextField id="roofTitle" hint="name" text="{{ roof.Title }}"/>
+        <Button id="type" text="Next" tap="{{ next }}"/>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'type') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="What is it?" cssClass="section-title" textWrap="true"/>
+        <ListView items="{{ roofTypes }}" itemTap="{{ selectType }}">
+          <ListView.itemTemplate>
+            <GridLayout>
+              <StackLayout cssClass="list-item">
+                <Label text="{{ value }}" />
+              </StackLayout>
+            </GridLayout>
+          </ListView.itemTemplate>
+        </ListView>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'petsType') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="Who's allowed?" cssClass="section-title" textWrap="true"/>
+        <ListView items="{{ roofPetsTypes }}" itemTap="{{ selectPetsType }}" >
+          <ListView.itemTemplate>
+            <GridLayout>
+              <StackLayout cssClass="list-item">
+                <Label text="{{ value }}" />
+              </StackLayout>
+            </GridLayout>
+          </ListView.itemTemplate>
+        </ListView>
+      </StackLayout>
+
+      <StackLayout  cssClass="section" style="{{ (activePanelId === 'location') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="Where's your roof located?" cssClass="section-title" textWrap="true"/>
+        <TextField hint="City" text="{{ roof.City }}"/>
+        <TextField hint="Adress" text="{{ roof.Address }}"/>
+        <Button text="Next" id="price" tap="{{ next }}"/>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'price') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="How much per night?" cssClass="section-title" textWrap="true"/>
+        <TextField keyboardTypeProperty="number" hint="Is it free(0) or paid?" text="{{ roof.Price }}"/>
+        <Button text="Next" id="description" tap="{{ next }}"/>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'description') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <Label text="Tell us more about your roof" cssClass="section-title" textWrap="true"/>
+        <TextView hint="My place rocks cause ..." text="{{ roof.Description }}"/>
+        <Button text="Next" id="picture" tap="{{ next }}"/>
+      </StackLayout>
+
+      <StackLayout cssClass="section" style="{{ (activePanelId === 'picture') ? 'visibility:visible;' : 'visibility:collapsed;' }}">
+        <GridLayout rows="auto, *, 150">
+          <Label text="Why not take a picture?" cssClass="section-title" textWrap="true"/>
+
+          <Image src="{{ photo }}" row="1" cssClass="photoPreview"/>
+
+          <StackLayout row="2">
+            <Button text="Take a picture" tap="{{ takePicture }}"/>
+            <Button text="Enough already" tap="{{ save }}"/>
+          </StackLayout>
+        </GridLayout>
+      </StackLayout>
+    </GridLayout>
+  </GridLayout>
+</Page>
